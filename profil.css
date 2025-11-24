@@ -1,0 +1,448 @@
+/* Page profil */
+
+.profil-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+}
+
+/* Section édition profil */
+.edit-profile-section h2 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: var(--text);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.edit-profile-section h3 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+}
+
+/* Avatar */
+.avatar-section {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    border: 4px solid var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.avatar-placeholder {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    margin: 0 auto 20px;
+    box-shadow: var(--shadow-md);
+}
+
+/* Statistiques */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.stat {
+    background: linear-gradient(135deg, var(--bg) 0%, #e5e7eb 100%);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.stat:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.stat .nombre {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.stat .label {
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Statistiques détaillées */
+.detailed-stats {
+    margin-top: 32px;
+    padding: 24px;
+    background: linear-gradient(135deg, var(--bg) 0%, #f3f4f6 100%);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.detailed-stats h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.detailed-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.detailed-stat-item {
+    background: var(--white);
+    text-align: center;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.detailed-stat-item:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.detailed-stat-item .value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.detailed-stat-item .label {
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Formulaires */
+.form-section {
+    margin-bottom: 24px;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.form-section input,
+.form-section textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.form-section input:focus,
+.form-section textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-section textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Aperçu signature */
+.signature-preview {
+    font-style: italic;
+    color: var(--text);
+    margin: 16px;
+    padding: 16px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+}
+
+/* Boutons de profil */
+.profile-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.profile-buttons button {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* Section Mes questions */
+.mes-questions-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.mes-questions-section h2 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: var(--text);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question-item {
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.question-item:hover {
+    box-shadow: var(--shadow-sm);
+    border-color: var(--primary-light);
+}
+
+.question-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.question-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.question-meta {
+    color: var(--text-light);
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.question-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.btn.small {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.solution-badge {
+    background: var(--success);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.status.open {
+    color: var(--success);
+}
+
+.status.closed {
+    color: var(--danger);
+}
+
+/* État vide amélioré */
+.empty-state {
+    text-align: center;
+    padding: 60px 40px;
+    color: var(--text-light);
+    background: linear-gradient(135deg, var(--bg) 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 2px dashed var(--border);
+    margin: 20px 0;
+}
+
+.empty-state p {
+    margin: 0 0 25px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.empty-state .btn.success {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--success) 0%, #20c997 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.empty-state .btn.success::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+}
+
+.empty-state .btn.success:hover::before {
+    left: 100%;
+}
+
+.empty-state .btn.success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.empty-state .btn.success:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(40, 167, 69, 0.3);
+}
+
+/* Animation d'icône */
+.empty-state .btn.success::after {
+    content: '❓';
+    font-size: 18px;
+}
+
+/* Pour les écrans plus petits */
+@media (max-width: 768px) {
+    .profil-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .mes-questions-section {
+        text-align: center;
+    }
+    
+    .empty-state {
+        padding: 40px 20px;
+    }
+    
+    .empty-state p {
+        font-size: 16px;
+    }
+    
+    .empty-state .btn.success {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+
+    .edit-profile-section {
+        padding: 24px;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .avatar-placeholder {
+        width: 120px;
+        height: 120px;
+        font-size: 48px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detailed-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-buttons {
+        flex-direction: column;
+    }
+
+    .profile-buttons button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-profile-section {
+        padding: 16px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detailed-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .question-actions {
+        flex-direction: column;
+    }
+    
+    .btn.small {
+        width: 100%;
+        text-align: center;
+    }
+}
